@@ -5,7 +5,7 @@
             <h1>asdasd asdasd </h1>
         </div>
         <div class="bidzina-amount__amount">
-            {{amount}} $ დაგრჩა
+            {{amount}} $ 
         </div>
     </div>
 </template>
