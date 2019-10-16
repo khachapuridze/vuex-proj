@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import * as actions from "./modules/actions";
+import * as mutations from "./modules/mutations";
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
@@ -63,31 +65,6 @@ export const store = new Vuex.Store({
             }
         ]
     },
-    mutations: {
-        priceMinus: (state,price) => {
-            state.amount -= price;
-        },
-        pricePlus: (state,price) => {
-            state.amount += price;
-
-        },
-    },
-    actions: {
-        priceMinus: ({commit}) => {
-            commit('priceMinus');
-        },
-        pricePlus: ({commit}) => {
-            commit('pricePlus');
-        },
-        AsyncPriceMinus: ({commit}) => {
-            setTimeout(() => {
-                commit('priceMinus')
-            },1000);
-        },
-        AsyncPricePlus: ({commit}) => {
-            setTimeout(() => {
-                commit('pricePlus')
-            },1000);
-        }
-    }
+    actions,
+    mutations
 });
